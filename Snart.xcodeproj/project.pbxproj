@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		658E1FA02233099400FB0128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E1F9F2233099400FB0128 /* AppDelegate.swift */; };
 		658E1FA22233099400FB0128 /* NewMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E1FA12233099400FB0128 /* NewMemoryViewController.swift */; };
-		658E1FA42233099400FB0128 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E1FA32233099400FB0128 /* SecondViewController.swift */; };
 		658E1FA72233099400FB0128 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658E1FA52233099400FB0128 /* Main.storyboard */; };
 		658E1FA92233099500FB0128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658E1FA82233099500FB0128 /* Assets.xcassets */; };
 		658E1FAC2233099500FB0128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658E1FAA2233099500FB0128 /* LaunchScreen.storyboard */; };
 		658E1FB72233099500FB0128 /* SnartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E1FB62233099500FB0128 /* SnartTests.swift */; };
 		658E1FC22233099500FB0128 /* SnartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E1FC12233099500FB0128 /* SnartUITests.swift */; };
+		65D66CB9227B1D3D007CD366 /* RemdinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D66CB8227B1D3D007CD366 /* RemdinerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		658E1F9C2233099400FB0128 /* Snart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658E1F9F2233099400FB0128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		658E1FA12233099400FB0128 /* NewMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryViewController.swift; sourceTree = "<group>"; };
-		658E1FA32233099400FB0128 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		658E1FA62233099400FB0128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		658E1FA82233099500FB0128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		658E1FAB2233099500FB0128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		658E1FBD2233099500FB0128 /* SnartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		658E1FC12233099500FB0128 /* SnartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnartUITests.swift; sourceTree = "<group>"; };
 		658E1FC32233099500FB0128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D66CB8227B1D3D007CD366 /* RemdinerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemdinerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +101,11 @@
 			children = (
 				658E1F9F2233099400FB0128 /* AppDelegate.swift */,
 				658E1FA12233099400FB0128 /* NewMemoryViewController.swift */,
-				658E1FA32233099400FB0128 /* SecondViewController.swift */,
 				658E1FA52233099400FB0128 /* Main.storyboard */,
 				658E1FA82233099500FB0128 /* Assets.xcassets */,
 				658E1FAA2233099500FB0128 /* LaunchScreen.storyboard */,
 				658E1FAD2233099500FB0128 /* Info.plist */,
+				65D66CB8227B1D3D007CD366 /* RemdinerViewController.swift */,
 			);
 			path = Snart;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658E1FA42233099400FB0128 /* SecondViewController.swift in Sources */,
+				65D66CB9227B1D3D007CD366 /* RemdinerViewController.swift in Sources */,
 				658E1FA02233099400FB0128 /* AppDelegate.swift in Sources */,
 				658E1FA22233099400FB0128 /* NewMemoryViewController.swift in Sources */,
 			);

@@ -97,8 +97,13 @@ class NewMemoryViewController: UIViewController, AVCapturePhotoCaptureDelegate {
             content.title = NSString.localizedUserNotificationString(forKey: notificationTitles[randomTitleIndex], arguments: nil)
             content.sound = UNNotificationSound.default
             
-            let attachment = try UNNotificationAttachment(identifier: identifier, url: attachmentURL, options: nil)
+            let tempAttachmentCopy = FileManager.default.temporaryDirectory.appendingPathComponent(attachmentURL.lastPathComponent)
+            try FileManager.default.copyItem(at: attachmentURL, to: tempAttachmentCopy)
+            
+            let attachment = try UNNotificationAttachment(identifier: identifier, url: tempAttachmentCopy, options: nil)
             content.attachments = [attachment]
+            
+            content.userInfo = ["imageName": attachmentURL.lastPathComponent]
             
             let cal = NSCalendar.current
             let comps = cal.dateComponents([.year, .month, .day, .hour, .minute], from: notificationTime)

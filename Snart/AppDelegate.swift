@@ -13,6 +13,7 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
+    var reminderImage: URL?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -27,11 +28,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        // TODO: Open the image here
+        guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+            else { return }
+        reminderImage = documentsURL.appendingPathComponent(response.notification.request.content.userInfo["imageName"] as! String)
+        window?.rootViewController?.performSegue(withIdentifier: "reminder", sender: nil)
+        
+        completionHandler()
+        
+        NSLog("Did receive notfication while in background")
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+            else { return }
+        reminderImage = documentsURL.appendingPathComponent(notification.request.content.userInfo["imageName"] as! String)
+        window?.rootViewController?.performSegue(withIdentifier: "reminder", sender: nil)
+        
         completionHandler(.sound)
+        
         NSLog("Did receive notfication while in foreground")
     }
 
